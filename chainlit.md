@@ -86,6 +86,12 @@ To re-run the app, re-activate the virtual environment and run Chainlit again.
 bash
 Copy
 Edit
+
+
+
+
+
+
 panaversity-ai-assistant/
 │
 ├── app.py               # Main Chainlit application
@@ -94,3 +100,6 @@ panaversity-ai-assistant/
 ├── requirements.txt     # Python dependencies
 ├── README.md            # Project overview
 └── chainlit.md          # Chainlit-specific guide (this file)
+
+
+
