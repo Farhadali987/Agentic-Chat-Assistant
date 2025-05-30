@@ -1,71 +1,96 @@
-🚀 Panaversity AI Assistant
-This is an AI-powered assistant built using Chainlit and Google Gemini API, developed by Agentic AI Engineer Farhad Ali Laghari. It responds intelligently in English, Urdu, or Sindhi, and introduces its creator when asked.
+ Chainlit Setup Guide for Panaversity AI Assistant
+This guide walks you through setting up and running the Chainlit-based AI assistant that uses the Gemini API. Developed by Farhad Ali Laghari, this chatbot responds in English, Urdu, and Sindhi, and introduces its creator when asked.
 
-✨ Features
-🤖 Built using Chainlit + Gemini API
+📦 Prerequisites
+Python 3.10 or higher
 
-🌐 Understands and responds in English, Urdu, and Sindhi
+pip
 
-🧠 Provides smart conversational responses
+Gemini API key from Google AI Studio
 
-🙋 Introduces the developer when asked "Who created you?"
+Git (optional but recommended)
 
-🔐 Uses .env for API key management
+Virtual environment support
 
-🛠️ Tech Stack
-Python 3.10+
-
-Chainlit
-
-Google Gemini API
-
-Langdetect
-
-dotenv
-
-📦 Installation
-Clone the repository
+⚙️ Installation Steps
+Clone the Project
 
 bash
 Copy
 Edit
 git clone https://github.com/your-username/panaversity-ai-assistant.git
 cd panaversity-ai-assistant
-Create a virtual environment
+Set Up a Virtual Environment
 
 bash
 Copy
 Edit
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install dependencies
+source venv/bin/activate  # Windows: venv\Scripts\activate
+Install Required Libraries
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Create a .env file and add your Gemini API key
+Add Your Gemini API Key
+
+Create a .env file in the root of your project:
 
 ini
 Copy
 Edit
 GEMINI_API_KEY=your_google_gemini_api_key_here
-🚀 Running the Assistant
+🚀 Run Chainlit App
+Start the Chainlit app using:
+
 bash
 Copy
 Edit
 chainlit run app.py
-Then open the URL shown in your terminal (usually http://localhost:8000).
+Chainlit will open your chatbot in the browser (usually at http://localhost:8000).
 
-📄 Example Prompts
-Who created you? → "I was created by Agentic AI Engineer Farhad Ali Laghari."
+🧠 Chatbot Behavior
+Responds based on Google Gemini 2.0 Flash
 
-توهان جو نالو ڇا آهي؟ → Sindhi response
+Automatically replies in the same language as the user: English, Urdu, or Sindhi
 
-آپ کہاں سے ہیں؟ → Urdu response
+Provides a custom introduction for the creator when asked:
 
-📧 Contact
-Farhad Ali Laghari
-Email: [your-email@example.com]
-Phone: 0324 8834244
-GitHub: github.com/your-username
+"Who created you?"
+
+"Who is your developer?"
+
+"Who made you?"
+
+🧪 Testing It
+Try these in the chat:
+
+Who created you?
+
+توهان ڪير آهيو؟
+
+آپ کہاں سے ہیں؟
+
+🧼 Resetting or Restarting
+To reset the environment:
+
+bash
+Copy
+Edit
+deactivate
+rm -rf venv
+To re-run the app, re-activate the virtual environment and run Chainlit again.
+
+📁 File Structure Overview
+bash
+Copy
+Edit
+panaversity-ai-assistant/
+│
+├── app.py               # Main Chainlit application
+├── agents/              # Custom agent and config setup
+├── .env                 # Your Gemini API key
+├── requirements.txt     # Python dependencies
+├── README.md            # Project overview
+└── chainlit.md          # Chainlit-specific guide (this file)
